@@ -1,0 +1,117 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    width: auto;
+    
+}
+body{
+    /* animation = nome dela,o tempo, a velocidade, e infinito para o processo */
+    animation: gradient 10s ease infinite; 
+    background: linear-gradient(-45deg, #f05454 ,#165594,#32c480,#b83d3d);/* */
+    background-size: 400% 400%;
+    height: auto;
+    width: 1343px;
+}
+
+@keyframes gradient { /*no lugar do gradient Ã© nome para ser identificado no animation*/
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+
+}
+.boasvindas{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    font-family: 'Bebas Neue', cursive;
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+.tituloinicial{
+    font-size: 40px;
+    font-weight: 500;
+}
+.textoinicial{
+    font-size: 25px;
+    margin-top: 20px;
+}
+.TodoConteudo{
+   align-items: center;
+   background: #202020;
+   width: auto;
+   height: 500px;
+    
+}
+
+/*//////////////CARDS DA PAGINA /////////////////////*/
+
+.-cardsuper{
+    height: auto;
+    width: auto;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 150px;
+}
+.-cardnormal{
+    margin: 5px;
+    width: auto;
+    border-radius: 10px;
+    margin-top: 60px;
+}
+.-cardnormal img{
+    margin: 5px;
+    align-items: center;
+    border-radius: 10px;
+}
+
+/*//////////////TITULO DOS CARDS/////////////////////*/
+
+.-naruto{
+    font-family: 'Bebas Neue', cursive;
+    font-weight: 500;
+    color: #836EFF;
+    text-align: center;
+}
+.-mortalkombat{
+    font-family: 'Bebas Neue', cursive;
+    font-weight: 500;
+    color: #836EFF;
+    text-align: center;
+}
+.-jujutsukaisen{
+    font-family: 'Bebas Neue', cursive;
+    font-weight: 500;
+    color: #836EFF;
+    text-align: center;
+}
+.-onepiece{
+    font-family: 'Bebas Neue', cursive;
+    font-weight: 500;
+    color: #836EFF;
+    text-align: center;
+}
+/*/////////////////////////////////////////////////////////*/
+.ajuda{
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+    margin: 50px;
+}
+.textoajuda{
+    text-align: left;
+    font-family: 'Bebas Neue', cursive;
+    color: #f7f7f7;
+    font-size: 25px;
+}
+
+
+/**/
