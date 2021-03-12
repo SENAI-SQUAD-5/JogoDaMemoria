@@ -42,11 +42,11 @@ body{
   /*//////////////CARDS DA PAGINA /////////////////////*/
 
 
-    .-conteudo{
+    .conteudo{
         width: 100%;
         background-color: #252525;
     }
-    .-supercard{
+    .supercard{
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
@@ -56,31 +56,34 @@ body{
         margin-left: 10%;
         margin-right: 10%
     }
-    .-card{
+    .card{
         margin: 2px;
-        width: 60px;
-        height: 93px;
+        width: 80px;
+        height: 124px;
         transform-style: preserve-3d;
         transition: all 0.7s ease;
     }
-    .-card:active {
-        transform: rotateY(188deg);
+    .card:active {
         border-radius: 10px;
+        transform: scale(0.90);
     }
-    .-frontcard{
+    .card.virar{
+        transform: rotateY(188deg);
+    }
+    .frontcard{
         position: absolute;
         width: 100%;
         height: 100%;
         backface-visibility: hidden;
     }
-    .-backcard{
+    .backcard{
         position: absolute;
         width: 100%;
         height: 100%;
         backface-visibility: hidden;
         transform: rotateY(188deg);
     }
-    .-card img{
+    .card img{
         border-radius: 10px;
     }
     /*//////////////////////////////////////////////////////////*/
@@ -102,8 +105,6 @@ body{
     /*/////////////////////////////////////////////////////////////*/
 
 }
-
-
 
 
 /*////////////////////////////////////////TAMANHO MÉDIO///////////////////////////////////////////*/
@@ -134,35 +135,38 @@ body{
     
     /*//////////////CARDS DA PAGINA /////////////////////*/
 
-    .-conteudo{
+    .conteudo{
         width: 100%;
         background-color: #252525;
     }
-    .-supercard{
+    .supercard{
         display: flex;
         flex-wrap: wrap;
         width: 60%;
         margin-left: 20%;
         margin-right: 20%;
     }
-    .-card{
+    .card{
         margin: 2px;
-        width: 60px;
-        height: 93px;
+        width: 80px;
+        height: 124px;
         transform-style: preserve-3d;
         transition: all 0.7s ease;
     }
-    .-card:active {
-        transform: rotateY(188deg);
+    .card:active {
         border-radius: 10px;
+        transform: scale(0.90);
     }
-    .-frontcard{
+    .card.virar{
+        transform: rotateY(188deg);
+    }
+    .frontcard{
         position: absolute;
         width: 100%;
         height: 100%;
         backface-visibility: hidden;
     }
-    .-backcard{
+    .backcard{
         position: absolute;
         width: 100%;
         height: 100%;
@@ -170,7 +174,7 @@ body{
         transform: rotateY(188deg);
     }
 
-    .-card img{
+    .card img{
         border-radius: 10px;
     }
 
@@ -232,48 +236,53 @@ body{
     
     /*//////////////CARDS DA PAGINA /////////////////////*/
     
-    .-conteudo{
+    .conteudo{
 
         width: 100%;
         margin-top: 100px;
         background-color: #252525;
         
     }
-    .-supercard{
+    .supercard{
         display: flex;
         flex-wrap: wrap;
         width: 60%;
         margin-left: 20%;
         margin-right: 20%;
     }
-    .-card{
+    .card{
         margin: 2px;
-        width: 60px;
-        height: 93px;
-        transform-style: preserve-3d;  /*Indica que os filhos do elemento devem ser posicionados no espaço 3D.*/
+        width: 80px;
+        height: 124px;
+        transform-style: preserve-3d;  /*Indica que os filhos do elemento devem ser posicionados no      espaço 3D.*/
         transition: all 0.7s ease;     /*Permite definir a transição entre dois estados de um elemento. */
        
     }
-    .-card:active {
-        transform: rotateY(188deg);  /* modificar o espaço coordenado do modelo de formatação CSS, */
+    .card:active {
+        transform: scale(0.90);      /* modificar o espaço coordenado do modelo de formatação CSS, */
         border-radius: 10px;         /*elementos podem ser traduzidos, rotacionados, ter seu 
-                                     tamanho  ajustado e inclinados de acordo com os valores definidos.*/
+                                      tamanho  ajustado e inclinados de acordo com os valores definidos.*/
     }
-    .-frontcard{
+
+    .card.virar{
+        transform: rotateY(188deg);
+    }
+
+    .frontcard{
         position: absolute;
         width: 100%;
         height: 100%;
         backface-visibility: hidden;
 
     }
-    .-backcard{
+    .backcard{
         position: absolute;
         width: 100%;
         height: 100%;
         backface-visibility: hidden;
         transform: rotateY(188deg);
     }
-    .-card img{
+    .card img{
         border-radius: 10px;
     }
 
@@ -298,13 +307,13 @@ body{
     /*/////////////////////////////////////////////////////////////*/
 
 }
-.-navegacao{
+.navegacao{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 }
-.-temas{
+.temas{
     font-family: 'Bebas Neue', cursive;
     color: #f7f7f7;
     font-weight: 500;
@@ -314,15 +323,16 @@ body{
     background-color: #449396;
     border-radius: 10px;  
 }
-.-temas a{
-    text-decoration: none;
-    color: #f7f7f7;
-    margin: 7px;
-}
-.-temas a:hover{
+.temas button{
     color: #000000;
+    margin: 5px;
+    font-family: 'Bebas Neue', cursive;
+    height: 20px;
+    width: 60px;
+    border: solid 2px black;
+    border-radius:3px ;
 }
-.-nivel{
+.nivel{
     font-family: 'Bebas Neue', cursive;
     color: #f7f7f7;
     font-weight: 500;
@@ -332,7 +342,7 @@ body{
     background-color: #943232;
     border-radius: 10px;
 }
-.-nivel button{
+.nivel button{
     margin: 5px;
 }
 .botoes{
