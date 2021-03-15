@@ -44,27 +44,30 @@ let codigodoHtml= '';    // Essa variavel ira receber as imagens
 // Tudo é jogado para ele.....
 // => nao é um operador, mas uma notação para a função de seta
 
-var bokunohero
-var naruto 
-var thema
-var tiptema
-var feedback ;
+var bokunohero,naruto;
+var thema,tiptema;
+var feedback;
+var carta1,carta2;
+var block = false;
+var final = 0;
+var pontuacao = 0;
 
 function alteranaruto(){
     thema = Naruto;
     tiptema = "naruto";
-    aplicaTema()
+    aplicaTema();
 }
 function alterabokunohero(){
     thema = Bokunohero;
     tiptema = "bokunohero";
-    aplicaTema()
+    aplicaTema();
 }
 function aplicaTema(){
     codigodoHtml = '';
+
 thema.forEach(img =>{
 
-    feedback = 0;
+    zeraTudo();
     codigodoHtml += `
     <div class="card" data-carta="${img}" >
         <div class="frontcard"><img src="img/${tiptema}/cover/cover.jpg"></div>
@@ -83,11 +86,6 @@ supercard.innerHTML = codigodoHtml + codigodoHtml;
 
 const cartas = document.querySelectorAll(".card")
 
-var carta1;
-var carta2;
-var block = false;
-var final = 0;
-
 
 function verif() {
     let comp = carta1.dataset.carta === carta2.dataset.carta?true:false;
@@ -95,6 +93,7 @@ function verif() {
     atualizaclique()
 
     if(!comp){
+
         
     remo();
 }
@@ -105,13 +104,17 @@ function verif() {
         block = null;
         carta1 = null;
         carta2 = null;
-        final++
+        final++;
+
+        ganhaPontos();
     }
     
     if(final == 12){
         setTimeout(() =>{
             alert("Parabéns !!");
-            aplicaTema()
+            
+            aplicaTema();
+            
         },500)
         
 
@@ -119,16 +122,26 @@ function verif() {
     // ! é Negação
     
 }
-
+function zeraTudo(){
+    feedback = 0;
+    document.getElementById("cliques").textContent = `${feedback}`
+    pontuacao = 0;
+    document.getElementById("pontuacao").textContent = `${pontuacao}`
+    final = 0;
+}
+function ganhaPontos(){
+    pontuacao += 125;
+    document.getElementById("pontuacao").textContent = `${pontuacao}`
+}
 function atualizaclique (){
-    if(feedback <= 20){
-    feedback++;
+    if(feedback < 22){
+    feedback ++;
     document.getElementById("cliques").textContent = `${feedback}`
 }
-else{
+    else{
     alert("Infelizmente você excedeu o numero maximo de cliques, tente novamente!!");
-    feedback = 0;
-    aplicaTema()
+
+    aplicaTema();
 }
 }
 

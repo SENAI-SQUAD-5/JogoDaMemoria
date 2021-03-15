@@ -15,7 +15,7 @@ body{
 
 /*/////////////////////////////HEADER E MAIN //////////////////////////////////////*/
 
-@media screen and (min-width: 200px) and (max-width: 800px){
+@media screen and (min-width: 100px) and (max-width: 800px){
    
     .boasvindas{
         display: flex;
@@ -50,9 +50,9 @@ body{
         justify-content: center;
         align-items: center;
         text-align: center;
-        width: 80%;
-        margin-left: 10%;
-        margin-right: 10%
+        width: 100%;
+        margin-left: 0%;
+        margin-right: 0%
     }
     .card{
         margin: 2px;
@@ -352,7 +352,8 @@ body{
     margin:3px;
 }
 .cliques{
-    width: 80px;
+    background-color: #943232;
+    width: 100px;
     border: solid 2px rgb(255, 255, 255);
     border-radius: 3px;
     font-family: 'Bebas Neue', cursive;
